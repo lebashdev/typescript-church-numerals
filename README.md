@@ -4,3 +4,5 @@ In TypeScript there are two spaces: the value space in which runtime computation
 The code space contains the code we ship, while the type space only exists in our IDE.
 
 The goal of the code in type-space.ts is to replicate the logic from value-space.ts, but only with types.  That code can only be evaluated at compile-time, or when the static analyzer performs type inference.  It has no purpose other than demonstrating that TypeScript's type system can represent simple computations.
+
+It relies on [Church Encoding](https://en.wikipedia.org/wiki/Church_encoding) to represent any positive integer, and some advanced type expressions to simulate recursive functions that take types as parameters, instead of actual values.
